@@ -27,7 +27,7 @@ Full-stack chat app with:
 ```bash
 cd backend
 npm install
-copy .env.example .env
+.env
 npm start
 ```
 
