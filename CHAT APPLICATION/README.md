@@ -1,11 +1,13 @@
 # Interactive Chat Application
 
-Company: CODTECH IT SOLUTIONS PVT. LTD.
-Name: Sujeet Kumar Yadav
-Intern ID: CTS1663
-Domain: Full Stack Web Development
-Duration: 30 December 2025 – 21 April 2026
-Mentor: Neela Santhosh Kumar
+## Internship Details
+
+* Company: CODTECH IT SOLUTIONS PVT. LTD.
+* Name: Sujeet Kumar Yadav
+* Intern ID: CTS1663
+* Domain: Full Stack Web Development
+* Duration: 30 December 2025 – 21 April 2026
+* Mentor: Neela Santhosh Kumar
 
 Full-stack chat app with:
 
