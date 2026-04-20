@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FocusTrack — Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <div class="page">
+      <h1>FocusTrack options</h1>
+      <p class="lead">
+        Set your API server URL and optional per-site category overrides. Overrides take precedence over the
+        built-in lists (coding, social, etc.).
+      </p>
+
+      <label for="apiBase">Backend base URL</label>
+      <input id="apiBase" type="url" placeholder="http://localhost:3847" autocomplete="off" />
+
+      <label for="overrides">Per-host overrides (JSON)</label>
+      <p class="hint">
+        Example: <code>{ "youtube.com": "productive", "reddit.com": "unproductive" }</code>
+      </p>
+      <textarea id="overrides" rows="8" spellcheck="false" placeholder='{ }'></textarea>
+
+      <div class="row">
+        <button type="button" id="save">Save</button>
+        <span id="status" class="status" aria-live="polite"></span>
+      </div>
+
+      <section class="card">
+        <h2>Your user id</h2>
+        <p id="userId" class="mono"></p>
+        <p class="hint">Use this id in the dashboard URL if you bookmark it without query params.</p>
+      </section>
+    </div>
+    <script src="options.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "focustrack-server",
+  "version": "1.0.0",
+  "description": "Backend API and analytics dashboard for the FocusTrack Chrome extension",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FocusTrack — Productivity dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <h1>FocusTrack</h1>
+        <p class="tagline">Weekly productivity analytics</p>
+      </div>
+      <form id="userForm" class="user-form">
+        <label for="userId">User id</label>
+        <input id="userId" name="userId" type="text" autocomplete="off" placeholder="Paste from extension options" />
+        <button type="submit">Load report</button>
+      </form>
+    </header>
+
+    <section id="error" class="banner error hidden" role="alert"></section>
+
+    <main id="content" class="hidden">
+      <section class="grid">
+        <article class="card kpi">
+          <h2>Last 7 days</h2>
+          <p id="kpiRatio" class="kpi-big"></p>
+          <p id="kpiSub" class="muted"></p>
+        </article>
+        <article class="card">
+          <h2>Time by category</h2>
+          <canvas id="pie" height="220"></canvas>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>Daily focus (productive vs rest)</h2>
+        <canvas id="bar" height="120"></canvas>
+      </section>
+
+      <section class="card">
+        <h2>Top sites (7 days)</h2>
+        <table class="table" id="hosts">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Host</th>
+              <th class="num">Time</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <footer class="footer">
+        <p id="generated" class="muted small"></p>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
