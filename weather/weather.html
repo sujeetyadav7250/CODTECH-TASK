@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weather App | CODTECH Internship</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header-row">
+        <h1>Weather Dashboard</h1>
+        <button id="logoutBtn" type="button" class="logout-btn">Logout</button>
+    </div>
+    <p class="subtitle">Fetch live weather data from Open-Meteo API.</p>
+    <div class="controls">
+        <input type="text" id="city" placeholder="Enter city name (e.g., Chennai)">
+        <button id="searchBtn" type="button">Get Weather</button>
+    </div>
+    <div class="loader" id="loader"></div>
+    <p class="status" id="statusMsg"></p>
+    <div class="result" id="weatherResult"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

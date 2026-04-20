@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App Redirect</title>
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+}
+
+.card {
+    background: #fff;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="card">
+    <h2>Weather App</h2>
+    <p>Redirecting...</p>
+</div>
+
+<script>
+const savedUser = localStorage.getItem("user");
+const savedPass = localStorage.getItem("pass");
+const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+
+if (isLoggedIn && savedUser && savedPass) {
+    window.location.href = "weather.html";
+} else if (savedUser && savedPass) {
+    window.location.href = "login.html";
+} else {
+    window.location.href = "signup.html";
+}
+</script>
+</body>
+</html>

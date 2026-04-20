@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#acb6e5,#74ebd5);
+    font-family:Arial;
+}
+.box{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    width:300px;
+    text-align:center;
+}
+input,button{
+    width:90%;
+    padding:10px;
+    margin:8px 0;
+}
+button{
+    background:#2196F3;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:6px;
+}
+p{
+    font-size:14px;
+    margin-bottom:0;
+}
+.hint{
+    color:#c62828;
+    min-height:18px;
+    margin:4px 0;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <p class="hint" id="message"></p>
+    <button onclick="login()">Login</button>
+    <p>New user? <a href="signup.html">Create account</a></p>
+</div>
+
+<script>
+if (localStorage.getItem("loggedIn") === "true") {
+    window.location.href = "weather.html";
+}
+
+function login(){
+    const user = document.getElementById("username").value.trim();
+    const pass = document.getElementById("password").value;
+    const message = document.getElementById("message");
+    message.textContent = "";
+
+    const savedUser = localStorage.getItem("user");
+    const savedPass = localStorage.getItem("pass");
+
+    if (!savedUser || !savedPass) {
+        message.textContent = "No account found. Please signup first.";
+        return;
+    }
+
+    if(user === savedUser && pass === savedPass){
+        alert("Login successful!");
+        localStorage.setItem("loggedIn","true");
+        window.location.href="weather.html";
+    } else {
+        message.textContent = "Invalid username or password.";
+    }
+}
+</script>
+
+</body>
+</html>

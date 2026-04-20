@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup</title>
+<style>
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#74ebd5,#acb6e5);
+    font-family:Arial;
+}
+.box{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    width:300px;
+    text-align:center;
+}
+input,button{
+    width:90%;
+    padding:10px;
+    margin:8px 0;
+}
+button{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:6px;
+}
+p{
+    font-size:14px;
+    margin-bottom:0;
+}
+.hint{
+    color:#c62828;
+    min-height:18px;
+    margin:4px 0;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Create Account</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+    <p class="hint" id="message"></p>
+    <button onclick="signup()">Signup</button>
+    <p>Already have account? <a href="login.html">Login</a></p>
+</div>
+
+<script>
+if (localStorage.getItem("loggedIn") === "true") {
+    window.location.href = "weather.html";
+}
+
+function signup(){
+    const user = document.getElementById("username").value.trim();
+    const pass = document.getElementById("password").value;
+    const confirmPass = document.getElementById("confirmPassword").value;
+    const message = document.getElementById("message");
+    message.textContent = "";
+
+    if(!user || !pass){
+        message.textContent = "Please fill all fields.";
+        return;
+    }
+
+    if (pass.length < 4) {
+        message.textContent = "Password must be at least 4 characters.";
+        return;
+    }
+
+    if (pass !== confirmPass) {
+        message.textContent = "Passwords do not match.";
+        return;
+    }
+
+    localStorage.setItem("user", user);
+    localStorage.setItem("pass", pass);
+
+    alert("Signup successful! Please login.");
+    window.location.href="login.html";
+}
+</script>
+
+</body>
+</html>
