@@ -1,5 +1,12 @@
 # Interactive Chat Application
 
+Company: CODTECH IT SOLUTIONS PVT. LTD.
+Name: Sujeet Kumar Yadav
+Intern ID: CTS1663
+Domain: Full Stack Web Development
+Duration: 30 December 2025 – 21 April 2026
+Mentor: Neela Santhosh Kumar
+
 Full-stack chat app with:
 
 - `frontend`: React (`.jsx`) + Tailwind CSS + Socket.IO client
@@ -22,7 +29,7 @@ copy .env.example .env
 npm start
 ```
 
-Backend runs on `http://localhost:4000`.
+
 
 ## Frontend setup
 
@@ -32,12 +39,15 @@ npm install
 npm run dev
 ```
 
-Frontend runs on `http://localhost:5173`.
 
-## MongoDB
 
-Use local MongoDB by default:
+## OUTPUT OF THE TASK
 
-`mongodb://127.0.0.1:27017/chat_app`
+<img width="1907" height="893" alt="image" src="https://github.com/user-attachments/assets/db8d69b4-d77c-41e4-b551-83a27d5cb923" />
 
-Or set your own `MONGO_URI` in `backend/.env`.
+
+<img width="1916" height="982" alt="image" src="https://github.com/user-attachments/assets/22f4df31-e9af-455e-abb6-aaaca1c86ae7" />
+
+
+
+
