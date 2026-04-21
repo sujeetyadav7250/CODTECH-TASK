@@ -2,11 +2,13 @@
 
 ### Internship Details
 
-* Company: CODTECH IT SOLUTIONS PVT. LTD.
-* Name: Sujeet Kumar Yadav
-* Intern ID: CTS1663
-* Domain: Full Stack Web Development
-* Duration: 30 December 2025 – 21 April 2026
+
+* Candidate Name: SUJEET KUMAR YADAV
+* Selected For: Full Stack Web Development
+* Organization: Codtech IT Solutions Private Limited
+* Duration: 16 Weeks
+* Internship Period: 30 December 2025 - 21 April 2026
+* Intern ID: CTIS1663
 * Mentor: Neela Santhosh Kumar
 
 
