@@ -16,10 +16,7 @@
 
 FocusTrack is a Chrome extension that measures time on websites, labels visits as **productive**, **neutral**, or **unproductive**, syncs totals to a small Node.js backend, and shows a **weekly dashboard** with charts and a short productivity summary.
 
-## Repository layout
 
-- `extension/` — Manifest V3 extension (service worker, popup, options).
-- `server/` — Express API with SQLite storage and the static analytics dashboard.
 
 ## Quick start
 
